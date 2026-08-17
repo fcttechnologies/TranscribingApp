@@ -11,6 +11,10 @@ A self-hosted web app that downloads audio from a public TikTok or YouTube URL �
 
 Most one-link transcription tools either upload your audio to someone else's server, paywall the model, or both. Transcription Studio is the local-first alternative: paste a link, run Whisper on your own hardware, and get the transcript without anyone else seeing the audio. It is the engine behind FCT Technologies' internal media workflows and is published as a reusable reference for anyone who wants a small, readable, fully-local transcription service.
 
+## Relationship to the native app
+
+This repository is the **open-source web engine**. It is the origin of, and still runs headless behind, [Transcription Studio](https://fct-technologies.com/projects/transcription-studio/), FCT Technologies' native macOS and iPhone app, which is a separate SwiftUI codebase that adds on-device speaker diarization (WhisperKit for speech, NVIDIA's Sortformer on the Apple Neural Engine) so a recording becomes a labeled who-said-what transcript. The native app is not open source and is not on the App Store; this engine is, under MIT, and is the piece you can read, self-host and build on.
+
 ## Why Faster-Whisper
 
 Faster-Whisper is a re-implementation of OpenAI's Whisper using [CTranslate2](https://github.com/OpenNMT/CTranslate2). For the same accuracy as the upstream `openai-whisper` package it delivers ~4× faster inference and ~2× lower memory use on CPU, with `int8` quantization that lets `base.en` run comfortably on a 16 GB Mac mini. CTranslate2 also makes CUDA acceleration a configuration change rather than a code change.
