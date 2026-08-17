@@ -13,7 +13,7 @@ Most one-link transcription tools either upload your audio to someone else's ser
 
 ## Relationship to the native app
 
-This repository is the **open-source web engine**. It is the origin of, and still runs headless behind, [Transcription Studio](https://fct-technologies.com/projects/transcription-studio/), FCT Technologies' native macOS and iPhone app, which is a separate SwiftUI codebase that adds on-device speaker diarization (WhisperKit for speech, NVIDIA's Sortformer on the Apple Neural Engine) so a recording becomes a labeled who-said-what transcript. The native app is not open source and is not on the App Store; this engine is, under MIT, and is the piece you can read, self-host and build on.
+This repository is the **open-source web engine**. It is the origin of, and still runs headless behind, [Transcription Studio](https://fct-technologies.com/projects/transcription-studio/), FCT Technologies' native macOS and iPhone app, which is a separate SwiftUI codebase that adds on-device speaker diarization (WhisperKit for speech, NVIDIA's Sortformer on the Apple Neural Engine) so a recording becomes a labeled who-said-what transcript. The native app is [TranscriptionStudioApp](https://github.com/fcttechnologies/TranscriptionStudioApp), source-available to read but not licensed for reuse, and it is not on the App Store; this engine is MIT and is the piece you can read, self-host and build on.
 
 ## Why Faster-Whisper
 
